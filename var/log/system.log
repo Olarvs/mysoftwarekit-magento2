@@ -302,3 +302,135 @@ no crontab for root [] []
  [] []
 [2023-06-02T03:00:57.521888+00:00] main.INFO: Request token 9ufq8nqkpqlsdypbwdckz1fg23kov0vn was exchanged to obtain access token for consumer 1 [] []
 [2023-06-02T03:01:15.293562+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-02T04:01:21.318940+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-02T05:00:49.812453+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-02T06:00:04.797977+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-02T07:00:32.961710+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-02T07:59:12.672084+00:00] main.ERROR: SQLSTATE[HY000] [2002] No such file or directory
+#0 /var/www/html/mysoftwarekit2-backend/vendor/magento/zend-db/library/Zend/Db/Adapter/Pdo/Mysql.php(111): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#1 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(428): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#2 /var/www/html/mysoftwarekit2-backend/vendor/magento/zend-db/library/Zend/Db/Adapter/Abstract.php(494): Magento\Framework\DB\Adapter\Pdo\Mysql->_connect()
+#3 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(297): Zend_Db_Adapter_Abstract->beginTransaction()
+#4 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Framework/DB/Adapter/Pdo/Mysql/Interceptor.php(23): Magento\Framework\DB\Adapter\Pdo\Mysql->beginTransaction()
+#5 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Model/ResourceModel/AbstractResource.php(66): Magento\Framework\DB\Adapter\Pdo\Mysql\Interceptor->beginTransaction()
+#6 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Model/ResourceModel/Db/AbstractDb.php(380): Magento\Framework\Model\ResourceModel\AbstractResource->beginTransaction()
+#7 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Model/AbstractModel.php(663): Magento\Framework\Model\ResourceModel\Db\AbstractDb->save()
+#8 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(853): Magento\Framework\Model\AbstractModel->save()
+#9 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Model/DeadlockRetrier.php(45): Magento\Cron\Observer\ProcessCronQueueObserver->Magento\Cron\Observer\{closure}()
+#10 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(855): Magento\Cron\Model\DeadlockRetrier->execute()
+#11 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(280): Magento\Cron\Observer\ProcessCronQueueObserver->processPendingJobs()
+#12 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Invoker/InvokerDefault.php(88): Magento\Cron\Observer\ProcessCronQueueObserver->execute()
+#13 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Invoker/InvokerDefault.php(74): Magento\Framework\Event\Invoker\InvokerDefault->_callObserverMethod()
+#14 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Manager.php(65): Magento\Framework\Event\Invoker\InvokerDefault->dispatch()
+#15 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Framework/Event/Manager/Proxy.php(95): Magento\Framework\Event\Manager->dispatch()
+#16 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/App/Cron.php(86): Magento\Framework\Event\Manager\Proxy->dispatch()
+#17 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Console/Command/CronCommand.php(126): Magento\Framework\App\Cron->launch()
+#18 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Command/Command.php(298): Magento\Cron\Console\Command\CronCommand->execute()
+#19 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(58): Symfony\Component\Console\Command\Command->run()
+#20 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(138): Magento\Cron\Console\Command\CronCommand\Interceptor->___callParent()
+#21 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Cron\Console\Command\CronCommand\Interceptor->Magento\Framework\Interception\{closure}()
+#22 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Cron/Console/Command/CronCommand/Interceptor.php(77): Magento\Cron\Console\Command\CronCommand\Interceptor->___callPlugins()
+#23 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(1040): Magento\Cron\Console\Command\CronCommand\Interceptor->run()
+#24 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(301): Symfony\Component\Console\Application->doRunCommand()
+#25 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Console/Cli.php(116): Symfony\Component\Console\Application->doRun()
+#26 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(171): Magento\Framework\Console\Cli->doRun()
+#27 /var/www/html/mysoftwarekit2-backend/bin/magento(23): Symfony\Component\Console\Application->run()
+#28 {main} [] []
+[2023-06-02T07:59:12.674234+00:00] main.ERROR: SQLSTATE[HY000] [2002] No such file or directory
+#0 /var/www/html/mysoftwarekit2-backend/vendor/magento/zend-db/library/Zend/Db/Adapter/Pdo/Mysql.php(111): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#1 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(428): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#2 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(593): Magento\Framework\DB\Adapter\Pdo\Mysql->_connect()
+#3 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(634): Magento\Framework\DB\Adapter\Pdo\Mysql->_query()
+#4 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Framework/DB/Adapter/Pdo/Mysql/Interceptor.php(95): Magento\Framework\DB\Adapter\Pdo\Mysql->query()
+#5 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Lock/Backend/Database.php(111): Magento\Framework\DB\Adapter\Pdo\Mysql\Interceptor->query()
+#6 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Lock/Proxy.php(66): Magento\Framework\Lock\Backend\Database->unlock()
+#7 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(308): Magento\Framework\Lock\Proxy->unlock()
+#8 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(278): Magento\Cron\Observer\ProcessCronQueueObserver->lockGroup()
+#9 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Invoker/InvokerDefault.php(88): Magento\Cron\Observer\ProcessCronQueueObserver->execute()
+#10 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Invoker/InvokerDefault.php(74): Magento\Framework\Event\Invoker\InvokerDefault->_callObserverMethod()
+#11 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Manager.php(65): Magento\Framework\Event\Invoker\InvokerDefault->dispatch()
+#12 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Framework/Event/Manager/Proxy.php(95): Magento\Framework\Event\Manager->dispatch()
+#13 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/App/Cron.php(86): Magento\Framework\Event\Manager\Proxy->dispatch()
+#14 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Console/Command/CronCommand.php(126): Magento\Framework\App\Cron->launch()
+#15 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Command/Command.php(298): Magento\Cron\Console\Command\CronCommand->execute()
+#16 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(58): Symfony\Component\Console\Command\Command->run()
+#17 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(138): Magento\Cron\Console\Command\CronCommand\Interceptor->___callParent()
+#18 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Cron\Console\Command\CronCommand\Interceptor->Magento\Framework\Interception\{closure}()
+#19 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Cron/Console/Command/CronCommand/Interceptor.php(77): Magento\Cron\Console\Command\CronCommand\Interceptor->___callPlugins()
+#20 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(1040): Magento\Cron\Console\Command\CronCommand\Interceptor->run()
+#21 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(301): Symfony\Component\Console\Application->doRunCommand()
+#22 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Console/Cli.php(116): Symfony\Component\Console\Application->doRun()
+#23 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(171): Magento\Framework\Console\Cli->doRun()
+#24 /var/www/html/mysoftwarekit2-backend/bin/magento(23): Symfony\Component\Console\Application->run()
+#25 {main} [] []
+[2023-06-02T07:59:12.681454+00:00] main.ERROR: SQLSTATE[HY000] [2002] No such file or directory
+#0 /var/www/html/mysoftwarekit2-backend/vendor/magento/zend-db/library/Zend/Db/Adapter/Pdo/Mysql.php(111): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#1 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(428): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#2 /var/www/html/mysoftwarekit2-backend/vendor/magento/zend-db/library/Zend/Db/Adapter/Abstract.php(494): Magento\Framework\DB\Adapter\Pdo\Mysql->_connect()
+#3 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(297): Zend_Db_Adapter_Abstract->beginTransaction()
+#4 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Framework/DB/Adapter/Pdo/Mysql/Interceptor.php(23): Magento\Framework\DB\Adapter\Pdo\Mysql->beginTransaction()
+#5 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Model/ResourceModel/AbstractResource.php(66): Magento\Framework\DB\Adapter\Pdo\Mysql\Interceptor->beginTransaction()
+#6 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Model/ResourceModel/Db/AbstractDb.php(380): Magento\Framework\Model\ResourceModel\AbstractResource->beginTransaction()
+#7 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Model/AbstractModel.php(663): Magento\Framework\Model\ResourceModel\Db\AbstractDb->save()
+#8 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(853): Magento\Framework\Model\AbstractModel->save()
+#9 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Model/DeadlockRetrier.php(45): Magento\Cron\Observer\ProcessCronQueueObserver->Magento\Cron\Observer\{closure}()
+#10 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(855): Magento\Cron\Model\DeadlockRetrier->execute()
+#11 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(280): Magento\Cron\Observer\ProcessCronQueueObserver->processPendingJobs()
+#12 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Invoker/InvokerDefault.php(88): Magento\Cron\Observer\ProcessCronQueueObserver->execute()
+#13 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Invoker/InvokerDefault.php(74): Magento\Framework\Event\Invoker\InvokerDefault->_callObserverMethod()
+#14 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Manager.php(65): Magento\Framework\Event\Invoker\InvokerDefault->dispatch()
+#15 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Framework/Event/Manager/Proxy.php(95): Magento\Framework\Event\Manager->dispatch()
+#16 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/App/Cron.php(86): Magento\Framework\Event\Manager\Proxy->dispatch()
+#17 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Console/Command/CronCommand.php(126): Magento\Framework\App\Cron->launch()
+#18 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Command/Command.php(298): Magento\Cron\Console\Command\CronCommand->execute()
+#19 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(58): Symfony\Component\Console\Command\Command->run()
+#20 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(138): Magento\Cron\Console\Command\CronCommand\Interceptor->___callParent()
+#21 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Cron\Console\Command\CronCommand\Interceptor->Magento\Framework\Interception\{closure}()
+#22 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Cron/Console/Command/CronCommand/Interceptor.php(77): Magento\Cron\Console\Command\CronCommand\Interceptor->___callPlugins()
+#23 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(1040): Magento\Cron\Console\Command\CronCommand\Interceptor->run()
+#24 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(301): Symfony\Component\Console\Application->doRunCommand()
+#25 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Console/Cli.php(116): Symfony\Component\Console\Application->doRun()
+#26 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(171): Magento\Framework\Console\Cli->doRun()
+#27 /var/www/html/mysoftwarekit2-backend/bin/magento(23): Symfony\Component\Console\Application->run()
+#28 {main} [] []
+[2023-06-02T15:00:29.361140+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-03T05:53:07.474923+00:00] main.ERROR: SQLSTATE[HY000] [2002] No such file or directory
+#0 /var/www/html/mysoftwarekit2-backend/vendor/magento/zend-db/library/Zend/Db/Adapter/Pdo/Mysql.php(111): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#1 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(428): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#2 /var/www/html/mysoftwarekit2-backend/vendor/magento/zend-db/library/Zend/Db/Adapter/Abstract.php(494): Magento\Framework\DB\Adapter\Pdo\Mysql->_connect()
+#3 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(297): Zend_Db_Adapter_Abstract->beginTransaction()
+#4 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Framework/DB/Adapter/Pdo/Mysql/Interceptor.php(23): Magento\Framework\DB\Adapter\Pdo\Mysql->beginTransaction()
+#5 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Model/ResourceModel/AbstractResource.php(66): Magento\Framework\DB\Adapter\Pdo\Mysql\Interceptor->beginTransaction()
+#6 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Model/ResourceModel/Db/AbstractDb.php(380): Magento\Framework\Model\ResourceModel\AbstractResource->beginTransaction()
+#7 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Model/AbstractModel.php(663): Magento\Framework\Model\ResourceModel\Db\AbstractDb->save()
+#8 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(853): Magento\Framework\Model\AbstractModel->save()
+#9 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Model/DeadlockRetrier.php(45): Magento\Cron\Observer\ProcessCronQueueObserver->Magento\Cron\Observer\{closure}()
+#10 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(855): Magento\Cron\Model\DeadlockRetrier->execute()
+#11 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Observer/ProcessCronQueueObserver.php(280): Magento\Cron\Observer\ProcessCronQueueObserver->processPendingJobs()
+#12 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Invoker/InvokerDefault.php(88): Magento\Cron\Observer\ProcessCronQueueObserver->execute()
+#13 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Invoker/InvokerDefault.php(74): Magento\Framework\Event\Invoker\InvokerDefault->_callObserverMethod()
+#14 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Event/Manager.php(65): Magento\Framework\Event\Invoker\InvokerDefault->dispatch()
+#15 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Framework/Event/Manager/Proxy.php(95): Magento\Framework\Event\Manager->dispatch()
+#16 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/App/Cron.php(86): Magento\Framework\Event\Manager\Proxy->dispatch()
+#17 /var/www/html/mysoftwarekit2-backend/vendor/magento/module-cron/Console/Command/CronCommand.php(126): Magento\Framework\App\Cron->launch()
+#18 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Command/Command.php(298): Magento\Cron\Console\Command\CronCommand->execute()
+#19 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(58): Symfony\Component\Console\Command\Command->run()
+#20 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(138): Magento\Cron\Console\Command\CronCommand\Interceptor->___callParent()
+#21 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Cron\Console\Command\CronCommand\Interceptor->Magento\Framework\Interception\{closure}()
+#22 /var/www/html/mysoftwarekit2-backend/generated/code/Magento/Cron/Console/Command/CronCommand/Interceptor.php(77): Magento\Cron\Console\Command\CronCommand\Interceptor->___callPlugins()
+#23 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(1040): Magento\Cron\Console\Command\CronCommand\Interceptor->run()
+#24 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(301): Symfony\Component\Console\Application->doRunCommand()
+#25 /var/www/html/mysoftwarekit2-backend/vendor/magento/framework/Console/Cli.php(116): Symfony\Component\Console\Application->doRun()
+#26 /var/www/html/mysoftwarekit2-backend/vendor/symfony/console/Application.php(171): Magento\Framework\Console\Cli->doRun()
+#27 /var/www/html/mysoftwarekit2-backend/bin/magento(23): Symfony\Component\Console\Application->run()
+#28 {main} [] []
+[2023-06-03T10:00:11.917626+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-03T12:00:05.572568+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-03T12:23:05.199134+00:00] main.WARNING: Deadlock detected in cron: SQLSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get lock; try restarting transaction, query was: UPDATE `cron_schedule` SET `status` = ? WHERE (job_code = 'sales_grid_order_creditmemo_async_insert') AND (status = 'running') [] []
+[2023-06-03T13:00:04.298520+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-03T15:02:06.040508+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: Response body is empty. Content-Type:  [] []
+[2023-06-03T16:00:05.238972+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-05T09:57:45.514014+00:00] main.WARNING: Deadlock detected in cron: SQLSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get lock; try restarting transaction, query was: DELETE FROM `cron_schedule` WHERE (status = 'missed') AND (job_code in ('indexer_reindex_all_invalid', 'indexer_update_all_views', 'indexer_clean_all_changelogs')) AND (scheduled_at < '2023-06-02 09:57:42') [] []
+[2023-06-05T10:00:22.660496+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-05T11:00:06.871451+00:00] main.WARNING: Subscription for MBI service has been failed. An error occurred during token exchange: {"message":"{:path [:url], :pred com.rjmetrics.ma-etl-service.routes.subscription/url?, :val \"http://localhost/mysoftwarekit2-backend/pub\", :via [:com.rjmetrics.ma-etl-service.routes.subscription/new-subscription-body :com.rjmetrics.ma-etl-service.routes.subscription/url], :in [:url]}"}. Content-Type: text/plain; charset=UTF-8 [] []
+[2023-06-05T13:33:14.552875+00:00] main.WARNING: Deadlock detected in cron: SQLSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get lock; try restarting transaction, query was: UPDATE `cron_schedule` SET `status` = ? WHERE (job_code = 'sales_send_order_emails') AND (status = 'running') [] []

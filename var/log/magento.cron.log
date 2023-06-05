@@ -1,0 +1,57 @@
+
+
+
+In Abstract.php line 144:
+                                                    
+  SQLSTATE[HY000] [2002] No such file or directory  
+                                                    
+
+In Abstract.php line 128:
+                                                    
+  SQLSTATE[HY000] [2002] No such file or directory  
+                                                    
+In Abstract.php line 144:
+In Abstract.php line 144:
+
+                                                    
+                                                    
+  SQLSTATE[HY000] [2002] No such file or directory  
+  SQLSTATE[HY000] [2002] No such file or directory  
+cron:run [--group GROUP] [--bootstrap BOOTSTRAP]
+
+                                                    
+                                                    
+
+
+In Abstract.php line 128:
+In Abstract.php line 128:
+                                                    
+                                                    
+  SQLSTATE[HY000] [2002] No such file or directory  
+  SQLSTATE[HY000] [2002] No such file or directory  
+                                                    
+                                                    
+
+
+cron:run [--group GROUP] [--bootstrap BOOTSTRAP]
+
+In Abstract.php line 305:
+                                                                   
+  SQLSTATE[HY000]: General error: 2006 MySQL server has gone away  
+                                                                   
+
+cron:run [--group GROUP] [--bootstrap BOOTSTRAP]
+
+
+In Abstract.php line 144:
+                                                    
+  SQLSTATE[HY000] [2002] No such file or directory  
+                                                    
+
+In Abstract.php line 128:
+                                                    
+  SQLSTATE[HY000] [2002] No such file or directory  
+                                                    
+
+cron:run [--group GROUP] [--bootstrap BOOTSTRAP]
+
